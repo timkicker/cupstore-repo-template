@@ -1,4 +1,4 @@
-# Wii U Mod Store — Repository Template
+# Wii U Mod Store: Repository Template
 
 This is the official template for hosting mods on the **Wii U Mod Store** app.
 
@@ -40,8 +40,8 @@ repo/
 
 ## Mod types
 
-- `mod` — A single standalone mod
-- `modpack` — A bundle of multiple mods installed together
+- `mod`: A single standalone mod
+- `modpack`: A bundle of multiple mods installed together
 
 ## game.json fields
 
@@ -70,6 +70,6 @@ repo/
 
 ## Notes
 
-- Title IDs can be found at [wiiubrew.org/wiki/Title_list](https://wiiubrew.org/wiki/Title_list)
+- Title IDs can be found at [wiiubrew.org/wiki/Title_database](https://wiiubrew.org/wiki/Title_database)
 - Mod ZIPs must match the SDCafiine folder structure (`content/` at root of ZIP)
-- The app does **not** verify mod safety — only distribute mods you trust
+- The app does **not** verify mod safety! only distribute mods you trust
