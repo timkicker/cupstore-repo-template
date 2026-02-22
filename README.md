@@ -1,6 +1,6 @@
 # CupStore Repo Template
 
-This is the official template for hosting mods on [CupStore](https://github.com/timkicker/cupstore) — a mod manager for the Wii U.
+This is the official template for hosting mods on [CupStore](https://github.com/timkicker/cupstore) - a mod manager for the Wii U.
 
 ## Quick Start
 
