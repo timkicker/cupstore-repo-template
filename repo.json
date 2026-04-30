@@ -1,13 +1,10 @@
 {
   "formatVersion": 1,
-  "name": "CupStore Template Repo",
-  "description": "Official template repository for CupStore. Fork this to host your own mods.",
-  "author": "your-name",
+  "name": "Matthew's Mod Repo",
+  "description": "My CupStore mods",
+  "author": "Matthew",
   "version": "1",
   "games": [
-    {
-      "id": "mario-kart-8",
-      "path": "games/mario-kart-8/game.json"
-    }
+    { "path": "games/mario-kart-8/game.json" }
   ]
 }
