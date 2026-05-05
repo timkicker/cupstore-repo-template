@@ -1,8 +1,14 @@
-# CupStore Repo Template
+# CoffeeShop Repo Template
 
-This is the official template for hosting mods on [CupStore](https://github.com/timkicker/cupstore) - a mod manager for the Wii U.
+This is the official template for hosting mods on [CoffeeShop](https://github.com/timkicker/coffeeshop), a mod manager for the Wii U.
 
-## Quick Start
+## Easiest way: use the Builder
+
+The [CoffeeShop Repo Builder](https://tim.kicker.dev/coffeeshop-builder/) is a browser tool that creates this whole structure for you. No JSON editing, no command line. Drop a mod ZIP and it computes the SHA-256 plus file size automatically. You can also import an existing `repo.json` URL and edit it.
+
+The rest of this README documents the schema for anyone who wants to author the JSON by hand.
+
+## Quick Start (manual)
 
 1. Fork this repository
 2. Edit `repo.json` (name, author)
@@ -60,7 +66,7 @@ games/
 | `author` | ✅ | Author name |
 | `version` | ✅ | Version string e.g. `1.0.0` |
 | `description` | ✅ | Short description |
-| `download` | ✅ | Direct URL to `.zip` file |
+| `download` | ✅ | Direct HTTPS URL to `.zip` file |
 | `type` | ✅ | `"mod"` or `"modpack"` |
 | `thumbnail` | ☑️ | Preview image URL (400x225) |
 | `screenshots` | ☑️ | List of screenshot URLs (800x450) |
@@ -69,8 +75,11 @@ games/
 | `license` | ☑️ | e.g. `"CC BY-NC"` |
 | `tags` | ☑️ | e.g. `["skin", "music", "course"]` |
 | `fileSize` | ☑️ | ZIP size in bytes |
+| `sha256` | ☑️ | 64-char lowercase hex hash of the ZIP. CoffeeShop verifies it post-download and rejects on mismatch. |
 | `requirements` | ☑️ | List of required mods/patches |
 | `changelog` | ☑️ | Free text changelog |
+
+Download URLs must be HTTPS. CoffeeShop blocks HTTP because the binary travels unauthenticated and a MITM could swap both the ZIP and the published `sha256`.
 
 ## Validation
 
@@ -91,4 +100,4 @@ your-mod.zip
     └── ...game files...
 ```
 
-CupStore installs to: `SD:/wiiu/sdcafiine/<titleId>/<modId>/`
+CoffeeShop installs to: `SD:/wiiu/sdcafiine/<titleId>/<modId>/`
